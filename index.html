@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <nav id="sidebar">
+        <ul>
+            <li>
+                <span>KeniHelp</span>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z" />
+                    </svg>
+                </button>
+            </li>
+
+            <li class="active">
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+                    </svg>
+                    <span>Task Manager</span>
+                </a>
+            </li>
+            <li>
+                <a href="../diction/dictionary.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M320-400h320v80H320v-80Zm0 120h320v80H320v-80Zm0 120h320v80H320v-80Zm0 120h320v80H320v-80Zm0 120h320v80H320v-80Zm-160-600h160v240H160V-600Zm0 320h160v240H160v-240Zm0 320h160v240H160v-240Zm0 320h160v240H160v-240Z" />
+                    </svg>
+                    <span>Dictionary</span>
+                </a>
+            </li>
+            <!-- <li>
+                <a href="../weather/weather.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M480-160c-66.667 0-120-53.333-120-120s53.333-120 120-120 120 53.333 120 120-53.333 120-120 120Zm0-40q53.333 0 90-36.667t36.667-90q0-53.333-36.667-90T480-480q-53.333 0-90 36.667T353.333-360q0 53.333 36.667 90T480-200Zm0-160q26.667 0 45.333-18.667T540-360q0-26.667-18.667-45.333T480-480q-26.667 0-45.333 18.667T420-360q0 26.667 18.667 45.333T480-320Zm0 320q66.667 0 120 53.333t53.333 120-53.333 120-120 53.333-120-53.333T360-160t53.333-120T480-160Z" />
+                    </svg>
+                    <span>Weather</span>
+                </a>
+            </li> -->
+            <li>
+                <a href="../newsfeed/newsfeed.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M160-160h640v80H160v-80Zm0-120h640v80H160v-80Zm0-120h640v80H160v-80Zm0-120h640v80H160v-80Zm0-120h640v80H160v-80Zm0-120h640v80H160v-80Zm0-120h640v80H160v-80Zm0-120h640v80H160v-80Zm0-120h640v80H160v-80Z" />
+                    </svg>
+                    <span>News Feed</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <div class="toast_WebName">
+            <h2> Your personal
+                task manager</h2>
+
+        </div>
+
+        <button class="task_creation">
+            Create your task
+        </button>
+
+
+
+
+        <div class="container">
+
+            <div class="categories">
+                <div class="todo_container">
+                    <span class="todohead">Todo</span>
+
+                    <div class="todo_holder">
+
+
+                    </div>
+                </div>
+                <div class="pending_container">
+                    <span class="pendinghead">
+                        Pending
+                    </span>
+
+                    <div class="pending_holder">
+
+                    </div>
+                </div>
+                <div class="doing_container">
+
+                    <span class="doinghead">
+                        Doing
+                    </span>
+
+                    <div class="doing_holder">
+
+                    </div>
+                </div>
+                <div class="done_container">
+                    <span class="donehead">
+                        Done
+                    </span>
+
+                    <div class="done_holder">
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Takin the data from user  -->
+
+            <form action="#" class="task_data">
+
+                <div class="form-grp taskTitle">
+                    <label>task title</label>
+
+                    <input type="text" placeholder="Title of you task ?" required id="taskInput">
+
+                </div>
+
+                <div class="task_description form-grp">
+                    <label>Description</label>
+                    <textarea id="description" rows="5" cols="30" placeholder="Write short Description"></textarea>
+                </div>
+
+                <div class="date_time">
+                    <div class="start_date_time form-grp">
+                        <label> Start Date & Time</label>
+                        <input type="date" id="start_date" name="start_date" required>
+                        <input type="time" id="start_time" name="start_time" required>
+                    </div>
+                    <div class="end_date_time form-grp">
+                        <label>End Date & Time</label>
+                        <input type="date" id="end_date" name="end_date" required>
+                        <input type="time" id="end_time" name="end_time" required>
+                    </div>
+                </div>
+                <div class="dropdown_holder">
+                    <!-- First dropdown: Priority -->
+                    <div class="dropdown">
+                        <div class="dropdown_button leftDrop">
+                            <span>Low</span>
+                            <i class="fa-solid fas fa-chevron-circle-down"></i>
+                        </div>
+                        <ul class="dropdown_list priority_dropdown">
+                            <li class="dropdown_item" id="low">Low</li>
+                            <li class="dropdown_item" id="medium">Medium</li>
+                            <li class="dropdown_item" id="hard">High</li>
+                        </ul>
+                    </div>
+
+                    <!-- Second dropdown: Category -->
+                    <div class="dropdown">
+                        <div class="dropdown_button right">
+                            <span>Pending</span>
+                            <i class="fa-solid fas fa-chevron-circle-down"></i>
+                        </div>
+                        <ul class="dropdown_list category_dropdown">
+                            <li class="dropdown_item" id="Todo">Todo</li>
+                            <li class="dropdown_item" id="pending">Pending</li>
+                            <li class="dropdown_item" id="doing">Doing</li>
+                            <li class="dropdown_item" id="done">Done</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <button type="Submit" class="create"> Click To Create</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
